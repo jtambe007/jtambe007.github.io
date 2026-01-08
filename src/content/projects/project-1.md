@@ -1,19 +1,31 @@
 ---
-title: 'Project 1'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
+title: 'Netflix Show Cancellation Analysis'
+description: 'Analyzing 500+ Netflix shows to identify patterns that predict cancellation vs. renewal'
+tags: ["Python", "Data Analysis", "TMDB API", "Pandas", "Visualization"]
 image:
-    url: '/.netlify/images?url=/images/GitHub.webp'
-    alt: 'GitHub wallpaper'
+    url: 'public\images\netflix-thumb.png'
+    alt: 'Netflix data visualization'
 worksImage1:
     url: '/.netlify/images?url=/images/image-1.webp'
     alt: 'first image of your project.'
 worksImage2:
     url: '/.netlify/images?url=/images/image-2.webp'
     alt: 'second image of your project.'
-platform: Web
-stack: Astro, JavaScript
+platform: Jupyter Notebook
+stack: 'Python, Pandas, Matplotlib/Seaborn'
 website: https://astro-milky-way.netlify.app/
-github: https://github.com/ttomczak3/Milky-Way
+github: https://github.com/jtambe007/netflix-cancellation-analysis
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie. Sed pellentesque leo auctor, auctor lorem nec, venenatis risus. Vivamus commodo ipsum vitae orci finibus, vel porta nunc viverra. In hac habitasse platea dictumst. Nunc pretium, ligula ultricies consequat sollicitudin, enim ex ullamcorper nisl.
+This portfolio project analyzes patterns in Netflix show cancellations using data from The Movie Database (TMDB) API.
+
+**Disclaimer:** This project uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.
+
+**Objectives**
+- Identify key factors that correlate with show cancellation
+- Analyze differences between canceled and renewed series
+- Create visualizations to communicate findings
+- Build a simple predictive model
+
+
+
