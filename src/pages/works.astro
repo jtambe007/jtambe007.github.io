@@ -12,12 +12,32 @@ const description = "Data analysis projects by Jacobyne Tambe, exploring enterta
     </div>
     <h2>Projects</h2>
     <ul role="list" class="link-card-grid">
-        {allProjects.map((card) => <Card 
-            url={`/projects/${card.id}/`} 
-            image={card.data.image.url} 
-            title={card.data.title} 
+        {allProjects.map((card) => <Card
+            url={`/projects/${card.id}/`}
+            image={card.data.image.url}
+            title={card.data.title}
             body={card.data.description}
         />)}
+        <li class="card coming-soon-card">
+            <div class="coming-soon-inner">
+                <span class="badge coming-soon-badge">Coming Soon</span>
+                <h3 class="card__title">SQL Project</h3>
+                <p class="card__txt">A data analysis project using SQL to explore and surface insights from structured datasets.</p>
+            </div>
+        </li>
+        <li class="card coming-soon-card">
+            <div class="coming-soon-inner">
+                <span class="badge coming-soon-badge">Coming Soon</span>
+                <h3 class="card__title">Capstone Project</h3>
+                <p class="card__txt">A comprehensive end-to-end data analysis project combining multiple tools and techniques.</p>
+            </div>
+        </li>
+        <li class="card coming-soon-card">
+            <div class="coming-soon-inner">
+                <span class="badge coming-soon-badge">Coming Soon</span>
+                <h3 class="card__title">Excel Project</h3>
+                <p class="card__txt">A data analysis and visualization project built with Excel, including dashboards and formulas.</p>
+            </div>
+        </li>
     </ul>
 </Layout>
-

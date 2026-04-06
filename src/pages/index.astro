@@ -1,7 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import Card from '../components/Card.astro';
 const pageTitle = "Jacobyne Tambe — Data Analyst";
 const description = "Data analyst specializing in Python, APIs, and data visualization. Passionate about entertainment data, storytelling, and uncovering insights that matter.";
+const allProjects = await getCollection("projects");
 ---
 <Layout pageTitle={pageTitle} description={description}>
     <div class="gif">
@@ -21,12 +24,6 @@ const description = "Data analyst specializing in Python, APIs, and data visuali
         </p>
     </div>
 
-    <div class="center">
-        <a href="/works/">
-            <button class="btn">My portfolio</button>
-        </a>
-    </div>
-
     <h2>Skills</h2>
     <div class="skills center">
         <p>
@@ -36,28 +33,20 @@ const description = "Data analyst specializing in Python, APIs, and data visuali
 
     <h2>Projects</h2>
     <ul role="list" class="link-card-grid">
-        <li class="card coming-soon-card">
-            <div class="coming-soon-inner">
-                <span class="badge coming-soon-badge">Coming Soon</span>
-                <h3 class="card__title">SQL Project</h3>
-                <p class="card__txt">A data analysis project using SQL to explore and surface insights from structured datasets.</p>
-            </div>
-        </li>
-        <li class="card coming-soon-card">
-            <div class="coming-soon-inner">
-                <span class="badge coming-soon-badge">Coming Soon</span>
-                <h3 class="card__title">Capstone Project</h3>
-                <p class="card__txt">A comprehensive end-to-end data analysis project combining multiple tools and techniques.</p>
-            </div>
-        </li>
-        <li class="card coming-soon-card">
-            <div class="coming-soon-inner">
-                <span class="badge coming-soon-badge">Coming Soon</span>
-                <h3 class="card__title">Excel Project</h3>
-                <p class="card__txt">A data analysis and visualization project built with Excel, including dashboards and formulas.</p>
-            </div>
-        </li>
+        {allProjects.map((card) => (
+            <Card
+                url={`/projects/${card.id}/`}
+                image={card.data.image.url}
+                title={card.data.title}
+                body={card.data.description}
+            />
+        ))}
     </ul>
+    <div class="center">
+        <a href="/works/">
+            <button class="btn">View all projects</button>
+        </a>
+    </div>
 
     <h2>Interests</h2>
     <p>
