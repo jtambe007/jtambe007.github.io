@@ -13,7 +13,6 @@ worksImage2:
     alt: 'second image of your project.'
 platform: Jupyter Notebook
 stack: 'Python, Pandas, Matplotlib/Seaborn'
-website: https://astro-milky-way.netlify.app/
 github: https://github.com/jtambe007/netflix-cancellation-analysis
 ---
 
