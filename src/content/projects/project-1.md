@@ -3,7 +3,7 @@ title: 'Netflix Show Cancellation Analysis'
 description: 'Analyzing 500+ Netflix shows to identify patterns that predict cancellation vs. renewal'
 tags: ["Python", "Data Analysis", "TMDB API", "Pandas", "Visualization"]
 image:
-    url: '/images/netflix-thumb.png'
+    url: '/images/netflix-thumb.jpg'
     alt: 'Netflix data visualization'
 worksImage1:
     url: '/images/image-1.webp'
