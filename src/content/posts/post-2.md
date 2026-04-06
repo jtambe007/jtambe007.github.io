@@ -3,7 +3,7 @@ title: 'Learning Astro as a Data Person: What Surprised Me'
 author: Jacobyne Tambe
 date: '03-20-2025'
 image:
-    url: '/.netlify/images?url=/images/blog-post.webp'
+    url: '/images/blog-post.webp'
     alt: 'Post Thumbnail'
 ---
 

@@ -3,7 +3,7 @@ title: 'What Netflix Data Taught Me About Storytelling'
 author: Jacobyne Tambe
 date: '02-10-2026'
 image:
-    url: '/.netlify/images?url=/images/blog-post.webp'
+    url: '/images/blog-post.webp'
     alt: 'Post Thumbnail'
 ---
 

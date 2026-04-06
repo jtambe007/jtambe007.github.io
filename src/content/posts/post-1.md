@@ -3,7 +3,7 @@ title: 'Working Smarter with Python: My Productivity Stack'
 author: Jacobyne Tambe
 date: '01-15-2025'
 image:
-    url: '/.netlify/images?url=/images/blog-post.webp'
+    url: '/images/blog-post.webp'
     alt: 'Post Thumbnail'
 ---
 

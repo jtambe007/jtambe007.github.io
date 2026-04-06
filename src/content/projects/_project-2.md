@@ -3,13 +3,13 @@ title: 'Spotify Music Trends Analysis'
 description: 'Exploring what makes songs trend on Spotify — analyzing audio features, release timing, and playlist placement patterns across 10,000+ tracks'
 tags: ["Python", "Spotify API", "Pandas", "Seaborn", "Data Analysis"]
 image:
-    url: '/.netlify/images?url=/images/GitHub.webp'
+    url: '/images/GitHub.webp'
     alt: 'Music data visualization'
 worksImage1:
-    url: '/.netlify/images?url=/images/image-1.webp'
+    url: '/images/image-1.webp'
     alt: 'Audio features correlation heatmap'
 worksImage2:
-    url: '/.netlify/images?url=/images/image-2.webp'
+    url: '/images/image-2.webp'
     alt: 'Trending tracks by release day and genre'
 platform: Jupyter Notebook
 stack: 'Python, Spotipy, Pandas, Matplotlib/Seaborn'

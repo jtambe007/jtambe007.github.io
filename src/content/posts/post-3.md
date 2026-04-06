@@ -3,7 +3,7 @@ title: 'How to Build a Data Portfolio Project (That People Actually Read)'
 author: Jacobyne Tambe
 date: '02-28-2025'
 image:
-    url: '/.netlify/images?url=/images/blog-post.webp'
+    url: '/images/blog-post.webp'
     alt: 'Post Thumbnail'
 ---
 

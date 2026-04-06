@@ -3,13 +3,13 @@ title: 'Netflix Show Cancellation Analysis'
 description: 'Analyzing 500+ Netflix shows to identify patterns that predict cancellation vs. renewal'
 tags: ["Python", "Data Analysis", "TMDB API", "Pandas", "Visualization"]
 image:
-    url: 'public\images\netflix-thumb.png'
+    url: '/images/netflix-thumb.png'
     alt: 'Netflix data visualization'
 worksImage1:
-    url: '/.netlify/images?url=/images/image-1.webp'
+    url: '/images/image-1.webp'
     alt: 'first image of your project.'
 worksImage2:
-    url: '/.netlify/images?url=/images/image-2.webp'
+    url: '/images/image-2.webp'
     alt: 'second image of your project.'
 platform: Jupyter Notebook
 stack: 'Python, Pandas, Matplotlib/Seaborn'
