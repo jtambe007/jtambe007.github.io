@@ -219,6 +219,49 @@ li {
   margin-top: 10px;
 }
 
+/* About Me headshot */
+.about {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.headshot {
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid #584966;
+}
+
+/* Coming Soon cards */
+.coming-soon-card {
+  border: 2px dashed #584966;
+  border-radius: 8px;
+  opacity: 0.85;
+}
+
+.coming-soon-inner {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.coming-soon-badge {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+
+/* Contact list */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-top: 10px;
+}
+
 /* Footer */
 footer {
   margin: 4rem 0;

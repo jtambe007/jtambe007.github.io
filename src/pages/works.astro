@@ -3,9 +3,10 @@ import { getCollection } from "astro:content";
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 const allProjects = await getCollection("projects");
-const pageTitle = "Works";
+const pageTitle = "Works — Jacobyne Tambe";
+const description = "Data analysis projects by Jacobyne Tambe, exploring entertainment trends, APIs, and Python-powered visualizations.";
 ---
-<Layout pageTitle={pageTitle}>
+<Layout pageTitle={pageTitle} description={description}>
     <div class="gif">
         <img src="/.netlify/images?url=/images/laptop.webp" role="presentation" width="300" height="259" decoding="async">
     </div>

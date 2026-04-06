@@ -1,22 +1,36 @@
 ---
-title: 'Post 1'
-author: Tristen Tomczak
-date: '03-23-2025'
+title: 'Working Smarter with Python: My Productivity Stack'
+author: Jacobyne Tambe
+date: '01-15-2025'
 image:
     url: '/.netlify/images?url=/images/blog-post.webp'
     alt: 'Post Thumbnail'
 ---
 
-Aenean a ex et metus finibus malesuada commodo in magna. In ut libero urna. Aenean in quam in ipsum rutrum egestas. Donec semper dignissim ante. Sed efficitur mi et sapien ultrices malesuada. Aliquam fermentum aliquam ante, eu semper mi vestibulum quis. Sed et purus metus. Pellentesque vestibulum commodo euismod. Duis a mauris accumsan lorem laoreet tempor. Mauris accumsan varius metus, in rutrum magna accumsan eget. Pellentesque at leo at sem tempor hendrerit non sit amet ante. Cras commodo augue sed magna rutrum rutrum.
+If you had told me two years ago that Python would become my go-to productivity tool — not just for data analysis — I would have laughed. But here we are.
 
-<div class="center">
-  <img class="pro-img" src="/.netlify/images?url=/images/image-1.webp" alt="First Image" width="500px" height="281" loading="lazy" decoding="async">
-</div>
+I started using Python for data work: cleaning datasets, building visualizations, calling APIs. Somewhere along the way I realized the same skills that make you good at automating data pipelines make you good at automating life. Here's the stack I've built.
 
-Vivamus sed faucibus lorem. Aenean a lorem convallis, ultrices nisl vitae, imperdiet elit. Duis in tristique lacus. Quisque sollicitudin dolor ac dui faucibus, ut tincidunt velit blandit. Donec tincidunt metus eros, at dignissim enim blandit ut. Cras varius tincidunt tortor ac tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a ipsum quis nulla commodo pretium. Ut sed sem bibendum, facilisis dolor sit amet, interdum nibh. Aliquam id auctor dolor. In nulla diam, mattis quis nisl et, aliquam interdum quam. Donec lobortis ex arcu, ac pharetra ante vehicula euismod. Donec finibus faucibus felis vitae facilisis.
+## Automating the Boring Parts
 
-<div class="center">
-  <img class="pro-img" src="/.netlify/images?url=/images/image-2.webp" alt="Second Image" width="500px" height="281" loading="lazy" decoding="async">
-</div>
+My week used to start with 30 minutes of pulling together numbers from different sources into a spreadsheet. Now a Python script does it in under a minute. The pattern is always the same:
 
-Vivamus sed faucibus lorem. Aenean a lorem convallis, ultrices nisl vitae, imperdiet elit. Duis in tristique lacus. Quisque sollicitudin dolor ac dui faucibus, ut tincidunt velit blandit. Donec tincidunt metus eros, at dignissim enim blandit ut. Cras varius tincidunt tortor ac tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a ipsum quis nulla commodo pretium. Ut sed sem bibendum, facilisis dolor sit amet, interdum nibh. Aliquam id auctor dolor. In nulla diam, mattis quis nisl et, aliquam interdum quam. Donec lobortis ex arcu, ac pharetra ante vehicula euismod. Donec finibus faucibus felis vitae facilisis.
+1. Pull data from wherever it lives (CSV, API, database)
+2. Clean and reshape with Pandas
+3. Export to a format my team can actually use
+
+Once you build that mental model, you start seeing automation opportunities everywhere.
+
+## Using APIs to Stay Informed
+
+I have a small script that pulls trending topics from a few APIs I care about — entertainment, tech news, datasets I'm watching. It runs every morning and dumps a summary into a text file I skim with coffee. No algorithm deciding what I see; just signals I chose.
+
+## The Notebook-as-Journal Approach
+
+I keep a Jupyter notebook as a running work journal. Each week gets a section: what I shipped, what I learned, what's blocked. It sounds odd to use a code notebook for writing, but the ability to mix text, code snippets, and charts in one place is genuinely useful for a data person.
+
+## What I'm Working On Next
+
+I want to add a simple dashboard — probably with Streamlit — that surfaces these morning summaries visually. Nothing fancy, just a single screen I can glance at. I'll write about it when it's done.
+
+The through line in all of this: the best productivity system is one you actually understand and can fix when it breaks. Python gives me that.

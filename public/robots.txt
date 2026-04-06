@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jtambe007.github.io/sitemap-index.xml
