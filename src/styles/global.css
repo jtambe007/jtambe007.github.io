@@ -327,6 +327,12 @@ li {
   font-size: 0.75rem;
 }
 
+.service-tier__sample {
+  font-size: 0.85rem;
+  margin: 0.4rem 0 0;
+  text-indent: 0;
+}
+
 /* Agency block */
 .agency-block {
   border: 1px dashed #584966;
