@@ -282,6 +282,73 @@ li {
   margin-bottom: 0.6rem;
 }
 
+/* Services */
+.service-tier {
+  border: 1px solid #584966;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+}
+
+.service-tier--featured {
+  border-color: var(--text-link);
+  border-width: 2px;
+}
+
+.service-tier__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.service-tier__name {
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.service-tier__price {
+  font-family: var(--body);
+  font-size: 1rem;
+  color: var(--text-link);
+  font-weight: 600;
+}
+
+.service-tier__scope {
+  font-size: 0.95rem;
+  margin: 0 0 0.6rem;
+  text-indent: 0;
+}
+
+.service-tier__time {
+  font-size: 0.75rem;
+}
+
+/* Agency block */
+.agency-block {
+  border: 1px dashed #584966;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0 0.5rem;
+}
+
+.agency-block__title {
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0 0 0.3rem;
+  text-indent: 0;
+}
+
+.agency-block__body {
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
+  text-indent: 0;
+}
+
 /* Contact list */
 .contact-list {
   list-style: none;

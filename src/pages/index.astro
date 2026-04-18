@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import Card from '../components/Card.astro';
-const pageTitle = "Jacobyne Tambe — Data Analyst";
-const description = "Data analyst specializing in Python, APIs, and data visualization. Passionate about entertainment data, storytelling, and uncovering insights that matter.";
+const pageTitle = "Jacobyne Tambe — Data Analyst & ML Engineer";
+const description = "Data Analyst at Bank of America building production ML models, Streamlit apps, and data pipelines. Available for freelance engagements with agencies and SMBs.";
 const allProjects = await getCollection("projects");
 ---
 <Layout pageTitle={pageTitle} description={description}>
@@ -12,8 +12,8 @@ const allProjects = await getCollection("projects");
     </div>
 
     <h1>Jacobyne Tambe</h1>
-    <p class="hero__tagline">Data analyst turning raw data into decisions — using Python, SQL, and data visualization.</p>
-    <div class="hero__stack">Python • SQL • Pandas • APIs • Data Visualization • Excel</div>
+    <p class="hero__tagline">I build data pipelines, ML models, and Streamlit apps for agencies and SMBs — turning messy data into systems your team can actually trust.</p>
+    <div class="hero__stack">Python · ML · Streamlit · ETL · NLP · Currently at Bank of America</div>
     <div class="center hero__cta">
         <a href="#contact">
             <button class="btn">Get in touch</button>
@@ -22,10 +22,46 @@ const allProjects = await getCollection("projects");
 
     <h2>About Me</h2>
     <p>
-    I'm a data analyst who believes data tells stories. I specialize in Python, APIs, and data visualization. I love uncovering patterns in datasets and transforming them into insights that actually mean something.
-    My perfect project? One where I get to dive deep into research, discover surprising patterns, create beautiful visualizations, and share what I learned. Bonus points if it involves entertainment data: TV shows, music, games, or anything that explores why audiences love what they love.
-    I'm interested in pursuing opportunities that combine analytical rigor with creative curiosity.
+    Currently a Data Analyst at Bank of America, where I've spent 2+ years building production ML models, Streamlit applications, and data pipelines in a regulated, enterprise environment. I've built and deployed 9 ML models, designed NLP annotation workflows in Label Studio, and shipped production-grade code that meets Fortune 50 governance and audit standards.
     </p>
+    <p>
+    That experience — documentation discipline, fallback paths, audit-ready code, working inside strict data governance — is what I bring to every freelance engagement. Based in Charlotte, NC. Available worldwide, async-first.
+    </p>
+
+    <h2>Services</h2>
+
+    <div class="service-tier">
+        <div class="service-tier__header">
+            <span class="service-tier__name">The Analytics Audit</span>
+            <span class="service-tier__price">$1,500 fixed</span>
+        </div>
+        <p class="service-tier__scope">1-week turnaround. Data health review, top 5 findings, 3 prioritized recommendations, and 1 before/after visualization. Delivered as a branded PDF report.</p>
+        <span class="badge service-tier__time">1 week</span>
+    </div>
+
+    <div class="service-tier service-tier--featured">
+        <div class="service-tier__header">
+            <span class="service-tier__name">The Data Sprint</span>
+            <span class="service-tier__price">Starts at $5,000</span>
+        </div>
+        <p class="service-tier__scope">2-week focused build. One deliverable: a dashboard + pipeline, a data validation tool, a churn model + playbook, or a Streamlit deployment. Fixed scope, fixed price.</p>
+        <span class="badge service-tier__time">2 weeks</span>
+    </div>
+
+    <div class="service-tier">
+        <div class="service-tier__header">
+            <span class="service-tier__name">Monthly Retainer</span>
+            <span class="service-tier__price">Starts at $1,500/mo</span>
+        </div>
+        <p class="service-tier__scope">10–15 hours of async support per month. Model monitoring, dashboard updates, ad-hoc questions, small enhancements. Async-only, 24–48 hr response.</p>
+        <span class="badge service-tier__time">Ongoing</span>
+    </div>
+
+    <div class="agency-block">
+        <p class="agency-block__title">For Agencies</p>
+        <p class="agency-block__body">Agency subcontract rates available on request. Weekly invoicing, async-only, white-label friendly. I'm not building my own book — your client relationship stays yours.</p>
+        <a class="badge__link" href="mailto:marietambe07@gmail.com?subject=Agency%20subcontract">Email to discuss →</a>
+    </div>
 
     <h2>Projects</h2>
     <ul role="list" class="link-card-grid">
@@ -44,22 +80,8 @@ const allProjects = await getCollection("projects");
         </a>
     </div>
 
-    <h2>Interests</h2>
-    <p>
-<strong>📚 Storytelling Enthusiast:</strong> I'm obsessed with captivating narratives whether it's through data visualizations or fiction novels. I am currently writing my first fantasy novel!
-</p>
-<p>
-<strong>✍️ Lifestyle Blogger:</strong> I run a blog about working smarter where I explore productivity hacks, optimization strategies, and wellness.
-</p>
-<p>
-<strong>🎬 Entertainment Data:</strong> I'm fascinated by what makes shows succeed, songs trend, and games captivate audiences. My portfolio projects explore these questions through data.
-</p>
-<p>
-<strong>🧠 Perpetual Learner:</strong> I'm always learning something new. Currently: advanced Python visualization, web scraping, and building this portfolio with Astro!
-</p>
-
     <h2 id="contact">Contact</h2>
-    <p>I'm open to data analyst opportunities and collaborations. I reply within 24 hours.</p>
+    <p>I reply within 24 hours. Based in Charlotte, NC — available worldwide, async-first.</p>
     <ul class="contact-list">
         <li>
             <span class="badge badge--item">LinkedIn</span>
@@ -70,5 +92,5 @@ const allProjects = await getCollection("projects");
             <a class="badge__link" href="mailto:marietambe07@gmail.com?subject=Project%20inquiry">marietambe07@gmail.com</a>
         </li>
     </ul>
-    <p class="contact-hint">Use subject line: <em>Project inquiry</em> or <em>Data analyst role</em></p>
+    <p class="contact-hint">Use subject line: <em>Project inquiry</em>, <em>Agency subcontract</em>, or <em>Data analyst role</em></p>
 </Layout>
