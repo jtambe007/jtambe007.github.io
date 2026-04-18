@@ -2,7 +2,7 @@
 title: 'Data Validation Streamlit App'
 description: 'A reusable Streamlit app that catches data-quality errors before they hit production — drop it into any agency client workflow in an afternoon.'
 image:
-    url: '/images/GitHub.webp'
+    url: '/images/laptop.webp'
     alt: 'Data Validation Streamlit App'
 worksImage1:
     url: '/images/image-1.webp'
