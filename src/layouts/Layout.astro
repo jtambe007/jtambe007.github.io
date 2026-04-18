@@ -2,7 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-const { pageTitle, description = "Jacobyne Tambe — Data Analyst specializing in Python, APIs, and data visualization." } = Astro.props;
+const { pageTitle, description = "Jackie Tambe — Rigorous data systems. Delivered without the drama. Production-grade ML, Streamlit, and data pipelines for agencies and SMBs." } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://jtambe007.github.io');
 const ogImage = `${Astro.site ?? 'https://jtambe007.github.io'}/images/space.webp`;
 ---
@@ -12,7 +12,7 @@ const ogImage = `${Astro.site ?? 'https://jtambe007.github.io'}/images/space.web
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="description" content={description}>
-        <meta name="author" content="Jacobyne Tambe">
+        <meta name="author" content="Jackie Tambe">
         <link rel="canonical" href={canonicalURL}>
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
 
@@ -31,8 +31,8 @@ const ogImage = `${Astro.site ?? 'https://jtambe007.github.io'}/images/space.web
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap" as="style">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,400&family=Inter:wght@400;600&display=swap" as="style">
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
 	</head>
@@ -45,15 +45,15 @@ const ogImage = `${Astro.site ?? 'https://jtambe007.github.io'}/images/space.web
         <script>
             function colorMode() {
                 if (
-                    localStorage.theme === "light" ||
-                    (!("theme" in localStorage) &&
-                    window.matchMedia("(prefers-color-scheme: light)").matches)
+                    localStorage.theme === 'dark' ||
+                    (!('theme' in localStorage) &&
+                    window.matchMedia('(prefers-color-scheme: dark)').matches)
                 ) {
-                    document.documentElement.classList.add("light");
+                    document.documentElement.classList.add('dark');
                 } else {
-                    document.documentElement.classList.remove("light");
+                    document.documentElement.classList.remove('dark');
                 }
-              }
+            }
 
             colorMode();
             document.addEventListener('astro:after-swap', colorMode);

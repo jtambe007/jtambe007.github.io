@@ -1,6 +1,6 @@
 ---
 title: 'Working Smarter with Python: My Productivity Stack'
-author: Jacobyne Tambe
+author: Jackie Tambe
 date: '01-15-2025'
 image:
     url: '/images/blog-post.webp'

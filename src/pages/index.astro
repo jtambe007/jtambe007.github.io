@@ -2,17 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import Card from '../components/Card.astro';
-const pageTitle = "Jacobyne Tambe — Data Analyst & ML Engineer";
-const description = "Data Analyst at Bank of America building production ML models, Streamlit apps, and data pipelines. Available for freelance engagements with agencies and SMBs.";
+const pageTitle = "Jackie Tambe — Rigorous data systems. Delivered without the drama.";
+const description = "Jackie Tambe builds production-grade ML models, Streamlit apps, and data pipelines for agencies and SMBs. Currently at Bank of America. Based in Charlotte, NC.";
 const allProjects = await getCollection("projects");
 ---
 <Layout pageTitle={pageTitle} description={description}>
-    <div class="gif">
-        <img src="/images/space.webp" role="presentation" width="300" height="259" decoding="async">
-    </div>
 
-    <h1>Jacobyne Tambe</h1>
-    <p class="hero__tagline">I build data pipelines, ML models, and Streamlit apps for agencies and SMBs — turning messy data into systems your team can actually trust.</p>
+    <h1>Jackie Tambe</h1>
+    <p class="hero__tagline">Rigorous data systems. Delivered without the drama.</p>
+    <p class="hero__promise">I build production-grade data work for smaller companies.</p>
     <div class="hero__stack">Python · ML · Streamlit · ETL · NLP · Currently at Bank of America</div>
     <div class="center hero__cta">
         <a href="#contact">
@@ -20,15 +18,12 @@ const allProjects = await getCollection("projects");
         </a>
     </div>
     <!-- Loom embed: replace href with your Loom URL when ready -->
-    <!-- <p class="center"><a class="badge__link" href="https://loom.com/share/YOUR_ID">▶ Watch: 60-min CSV to Dashboard (how fast can I ship for your client?)</a></p> -->
+    <!-- <p class="center"><a class="badge__link" href="https://loom.com/share/YOUR_ID">▶ Watch: 60-min CSV to Dashboard — how fast can I ship for your client?</a></p> -->
 
-    <h2>About Me</h2>
-    <p>
-    Currently a Data Analyst at Bank of America, where I've spent 2+ years building production ML models, Streamlit applications, and data pipelines in a regulated, enterprise environment. I've built and deployed 9 ML models, designed NLP annotation workflows in Label Studio, and shipped production-grade code that meets Fortune 50 governance and audit standards.
-    </p>
-    <p>
-    That experience — documentation discipline, fallback paths, audit-ready code, working inside strict data governance — is what I bring to every freelance engagement. Based in Charlotte, NC. Available worldwide, async-first.
-    </p>
+    <h2>About</h2>
+    <p>Two-plus years at Bank of America, building production ML models, Streamlit apps, and data pipelines inside a regulated, enterprise environment. I learned what real production systems look like: governance, audit trails, documentation discipline, fallback paths. The kind of rigor that only gets beaten into you when something breaks and regulators notice.</p>
+    <p>The culture didn't match the craft. Micromanagement, hostile team dynamics, the long slow grind that eats good builders. I watched myself start to burn out and made a decision: leave before the work I cared about became work I hated.</p>
+    <p>Same rigor, without the rot. Freelance, async-first, no drama. I help agencies and smaller businesses get enterprise-quality data work — without inheriting enterprise dysfunction. Cameroonian-American, based in Charlotte, NC. I write novels when I'm not shipping dashboards.</p>
     <p><a class="badge__link" href="/posts/post-5/">Read: 9 ML Models in a Regulated Bank →</a></p>
 
     <h2>Services</h2>
@@ -48,7 +43,7 @@ const allProjects = await getCollection("projects");
             <span class="service-tier__name">The Data Sprint</span>
             <span class="service-tier__price">Starts at $5,000</span>
         </div>
-        <p class="service-tier__scope">2-week focused build. One deliverable: a dashboard + pipeline, a data validation tool, a churn model + playbook, or a Streamlit deployment. Fixed scope, fixed price.</p>
+        <p class="service-tier__scope">2-week focused build. One deliverable: a dashboard + pipeline, a data validation tool, a churn model + playbook, or a Streamlit deployment. Fixed scope, fixed price. Training session included.</p>
         <span class="badge service-tier__time">2 weeks</span>
     </div>
 
@@ -78,7 +73,7 @@ const allProjects = await getCollection("projects");
             />
         ))}
     </ul>
-    <div class="center">
+    <div class="center" style="margin-top:1rem;">
         <a href="/works/">
             <button class="btn">View all projects</button>
         </a>
@@ -96,5 +91,5 @@ const allProjects = await getCollection("projects");
             <a class="badge__link" href="mailto:marietambe07@gmail.com?subject=Project%20inquiry">marietambe07@gmail.com</a>
         </li>
     </ul>
-    <p class="contact-hint">Use subject line: <em>Project inquiry</em>, <em>Agency subcontract</em>, or <em>Data analyst role</em></p>
+    <p class="contact-hint">Subject line: <em>Project inquiry</em>, <em>Agency subcontract</em>, or <em>Data analyst role</em></p>
 </Layout>
