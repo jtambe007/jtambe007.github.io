@@ -10,26 +10,22 @@ const allProjects = await getCollection("projects");
     <div class="gif">
         <img src="/images/space.webp" role="presentation" width="300" height="259" decoding="async">
     </div>
+
     <h1>Jacobyne Tambe</h1>
-    <span class="badge">Data Analyst</span>
+    <p class="hero__tagline">Data analyst turning raw data into decisions — using Python, SQL, and data visualization.</p>
+    <div class="hero__stack">Python • SQL • Pandas • APIs • Data Visualization • Excel</div>
+    <div class="center hero__cta">
+        <a href="#contact">
+            <button class="btn">Get in touch</button>
+        </a>
+    </div>
 
     <h2>About Me</h2>
-    <div class="about">
-        <!-- Replace /images/headshot.jpg with your actual headshot photo -->
-        <img class="headshot" src="/images/headshot.jpg" alt="Jacobyne Tambe" width="140" height="140" onerror="this.style.display='none'">
-        <p>
-        I'm a data analyst who believes data tells stories. I specialize in Python, APIs, and data visualization. I love uncovering patterns in datasets and transforming them into insights that actually mean something.
-        My perfect project? One where I get to dive deep into research (yes, I'm that person with 50 browser tabs open), discover surprising patterns, create beautiful visualizations, and share what I learned. Bonus points if it involves entertainment data: TV shows, music, games, or anything that explores why audiences love what they love.
-        I am interested in pursuing opportunities that combine analytical rigor with creative curiosity.
-        </p>
-    </div>
-
-    <h2>Skills</h2>
-    <div class="skills center">
-        <p>
-        Python • Data Analysis • Pandas • APIs • Data Visualization • SQL • Excel • Agile • Process Improvement
-        </p>
-    </div>
+    <p>
+    I'm a data analyst who believes data tells stories. I specialize in Python, APIs, and data visualization. I love uncovering patterns in datasets and transforming them into insights that actually mean something.
+    My perfect project? One where I get to dive deep into research, discover surprising patterns, create beautiful visualizations, and share what I learned. Bonus points if it involves entertainment data: TV shows, music, games, or anything that explores why audiences love what they love.
+    I'm interested in pursuing opportunities that combine analytical rigor with creative curiosity.
+    </p>
 
     <h2>Projects</h2>
     <ul role="list" class="link-card-grid">
@@ -62,8 +58,8 @@ const allProjects = await getCollection("projects");
 <strong>🧠 Perpetual Learner:</strong> I'm always learning something new. Currently: advanced Python visualization, web scraping, and building this portfolio with Astro!
 </p>
 
-    <h2>Contact</h2>
-    <p>I'm open to data analyst opportunities and collaborations. Feel free to reach out!</p>
+    <h2 id="contact">Contact</h2>
+    <p>I'm open to data analyst opportunities and collaborations. I reply within 24 hours.</p>
     <ul class="contact-list">
         <li>
             <span class="badge badge--item">LinkedIn</span>
@@ -71,7 +67,8 @@ const allProjects = await getCollection("projects");
         </li>
         <li>
             <span class="badge badge--item">Email</span>
-            <a class="badge__link" href="mailto:marietambe07@gmail.com">marietambe07@gmail.com</a>
+            <a class="badge__link" href="mailto:marietambe07@gmail.com?subject=Project%20inquiry">marietambe07@gmail.com</a>
         </li>
     </ul>
+    <p class="contact-hint">Use subject line: <em>Project inquiry</em> or <em>Data analyst role</em></p>
 </Layout>

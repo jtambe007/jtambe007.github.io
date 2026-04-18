@@ -219,6 +219,36 @@ li {
   margin-top: 10px;
 }
 
+/* Hero */
+.hero__tagline {
+  font-size: 1.15rem;
+  margin: 0.4rem 0 0.6rem;
+  text-indent: 0;
+  text-align: center;
+  color: var(--text);
+}
+
+.hero__stack {
+  font-family: var(--body);
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--text-link);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.4rem;
+}
+
+.hero__cta {
+  margin: 1rem 0 1.5rem;
+}
+
+/* Contact hint */
+.contact-hint {
+  font-size: 0.9rem;
+  text-indent: 0;
+  margin-top: 0.6rem;
+  opacity: 0.75;
+}
+
 /* About Me headshot */
 .about {
   display: flex;
