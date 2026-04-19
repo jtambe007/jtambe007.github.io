@@ -1,6 +1,6 @@
 ---
 title: 'Learning Astro as a Data Person: What Surprised Me'
-author: Jackie Tambe
+author: Jacobyne Tambe
 date: '03-20-2025'
 image:
     url: '/images/blog-post.webp'

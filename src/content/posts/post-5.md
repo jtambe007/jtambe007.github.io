@@ -1,6 +1,6 @@
 ---
 title: '9 ML Models in a Regulated Bank — What It Means for Your Project'
-author: Jackie Tambe
+author: Jacobyne Tambe
 date: '04-10-2025'
 image:
     url: '/images/blog-post.webp'

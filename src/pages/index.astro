@@ -2,13 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import Card from '../components/Card.astro';
-const pageTitle = "Jackie Tambe — Rigorous data systems. Delivered without the drama.";
-const description = "Jackie Tambe builds production-grade ML models, Streamlit apps, and data pipelines for agencies and SMBs. Currently at Bank of America. Based in Charlotte, NC.";
+const pageTitle = "Jacobyne Tambe — Rigorous data systems. Delivered without the drama.";
+const description = "Jacobyne Tambe builds production-grade ML models, Streamlit apps, and data pipelines for agencies and SMBs. Currently at Bank of America. Based in Charlotte, NC.";
 const allProjects = await getCollection("projects");
 ---
 <Layout pageTitle={pageTitle} description={description}>
 
-    <h1>Jackie Tambe</h1>
+    <h1>Jacobyne Tambe</h1>
     <p class="hero__tagline">Rigorous data systems. Delivered without the drama.</p>
     <p class="hero__promise">I build production-grade data work for smaller companies.</p>
     <div class="hero__stack">Python · ML · Streamlit · ETL · NLP · Currently at Bank of America</div>

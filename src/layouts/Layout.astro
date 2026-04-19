@@ -2,7 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-const { pageTitle, description = "Jackie Tambe — Rigorous data systems. Delivered without the drama. Production-grade ML, Streamlit, and data pipelines for agencies and SMBs." } = Astro.props;
+const { pageTitle, description = "Jacobyne Tambe — Rigorous data systems. Delivered without the drama. Production-grade ML, Streamlit, and data pipelines for agencies and SMBs." } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://jtambe007.github.io');
 const ogImage = `${Astro.site ?? 'https://jtambe007.github.io'}/images/space.webp`;
 ---
@@ -12,7 +12,7 @@ const ogImage = `${Astro.site ?? 'https://jtambe007.github.io'}/images/space.web
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="description" content={description}>
-        <meta name="author" content="Jackie Tambe">
+        <meta name="author" content="Jacobyne Tambe">
         <link rel="canonical" href={canonicalURL}>
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
 
