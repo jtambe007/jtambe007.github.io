@@ -1,54 +1,53 @@
 ---
-title: 'Data Validation Streamlit App'
-description: 'A reusable Streamlit app that catches data-quality errors before they hit production — drop it into any agency client workflow in an afternoon.'
+title: 'Cameroon Public Data Pipeline'
+description: 'End-to-end ETL from raw government source to live public dashboard — a reproducible pipeline pattern for any mid-market data consolidation engagement.'
 image:
     url: '/images/laptop.webp'
-    alt: 'Data Validation Streamlit App'
+    alt: 'Cameroon Public Data Pipeline'
 worksImage1:
     url: '/images/image-1.webp'
-    alt: 'Data health scorecard with color-coded findings'
+    alt: 'Pipeline architecture diagram'
 worksImage2:
     url: '/images/image-2.webp'
-    alt: 'Outlier distribution charts and schema drift report'
-platform: Streamlit Community Cloud
-stack: 'Python, Streamlit, Pandas, Plotly, YAML, ReportLab'
-website: https://jtambe007.github.io
+    alt: 'Live Streamlit dashboard with Cameroon trade indicators'
+platform: Streamlit Community Cloud + GitHub Actions
+stack: 'Python, Pandas, SQLite, Streamlit, GitHub Actions, BeautifulSoup'
 github: https://github.com/jtambe007
 ---
 
-Upload any CSV. Get a data-health report in 30 seconds. Catches the top-10 most common issues. Configurable for a client's domain in an afternoon.
+One command from raw government CSV to live dashboard, updated weekly. This is the exact pattern I'd apply to your client's data consolidation project — swap the source, keep the skeleton.
 
 ## The Problem
 
-Clients ship messy CSVs and exports into dashboards constantly. Nulls, duplicates, schema drift, encoding errors, outliers — every project starts with the same painful cleanup cycle that consumes 30–50% of project time.
+Mid-market clients arrive with data scattered across five or more sources: spreadsheets, legacy databases, API exports, PDFs, and inconsistent CSVs with no schema and no documentation. Nobody has integrated it.
 
-Most freelancers tell agencies *"I can clean your data."* A prebuilt, configurable tool that already does it is a fundamentally different sales position: faster delivery, more professional result, lower agency cost per project.
+The deliverable an agency actually needs isn't the dashboard — it's the **pipeline pattern**: a reproducible, documented skeleton that ingests messy source data, cleans it reliably, stores it, and serves it. This project is proof I can ship that pattern end-to-end, without an engineering team behind me.
 
 ## The Approach
 
-A hosted Streamlit app that accepts a CSV upload and runs a configurable suite of checks:
+Using Cameroon government trade and economic indicators as the source data — real-world messy, inconsistent formats, encoding issues, broken URLs — the pipeline covers every stage:
 
-- **Null analysis** — column-level missing rate with threshold flags
-- **Duplicate detection** — exact and near-duplicate rows
-- **Type mismatches** — values that don't match declared or inferred schema
-- **Outlier detection** — both IQR and z-score methods, configurable sensitivity
-- **Schema drift** — comparison against a reference file to flag added, removed, or renamed columns
+1. **Ingest** — scrape or download from public government data URL
+2. **Clean and normalize** — handle encoding errors, inconsistent date formats, missing values, and column name drift across annual releases
+3. **Store** — load into SQLite (zero-infrastructure, version-controlled alongside code)
+4. **Serve** — Streamlit dashboard with 2–3 views (trend lines, regional breakdown, year-over-year comparisons)
+5. **Automate** — GitHub Action scheduled to re-run weekly, keeping the dashboard live without manual intervention
 
-The rule set is **YAML-configurable** — an agency plugs in a client-specific config file and the app runs their validation profile without touching Python. Outputs a color-coded scorecard, charted distributions, and an exportable PDF report.
+One-command rerun: `python pipeline.py` ingests, cleans, stores, and the dashboard picks up the updated data on next load.
 
-Hosted on Streamlit Community Cloud (free tier) so the demo is always live.
+Architecture diagram documents every deliberate scope decision so any engineer can extend or adapt it.
 
 ## Tech Stack
 
-Python · Streamlit · Pandas · Plotly · YAML configuration · ReportLab (PDF export) · Streamlit Community Cloud
+Python · Pandas · requests / BeautifulSoup · SQLite · Streamlit · GitHub Actions · Excalidraw (architecture diagram)
 
 ## Deliverables
 
-- Live hosted app with public demo URL
-- GitHub repo with README, architecture diagram, and sample YAML configs for retail, healthcare, and finance verticals
-- One sample PDF report using a public messy dataset
-- 2-minute Loom walkthrough: messy CSV in, full health report out
+- Public GitHub repo with one-command rerun script and full README
+- Live dashboard on Streamlit Community Cloud, updated weekly via GitHub Actions
+- Architecture diagram embedded in the case study
+- 90-second Loom walking through one rerun cycle
 
 ## Outcome
 
-Any analytics agency can drop this into a client workflow on day one of a project. The validation step that used to take a half-day now takes 30 seconds and produces a client-ready report.
+The real signal is not Cameroon — it's *I can go from raw, ugly, untrusted data all the way to a live, auto-refreshing dashboard, by myself, repeatably.* This pattern scales to any multi-source client project. Swap the source, keep the skeleton.

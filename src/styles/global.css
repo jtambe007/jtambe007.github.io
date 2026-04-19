@@ -244,6 +244,29 @@ li {
 }
 
 /* Hero */
+.hero__layout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hero__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero__text h1 {
+  margin-bottom: 0;
+}
+
+.hero__loom {
+  font-size: 0.9rem;
+  margin: 0.3rem 0 1.5rem;
+  opacity: 0.85;
+}
+
 .hero__tagline {
   font-family: var(--header);
   font-style: italic;

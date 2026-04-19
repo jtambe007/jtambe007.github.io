@@ -8,8 +8,20 @@ const allProjects = await getCollection("projects");
 ---
 <Layout pageTitle={pageTitle} description={description}>
 
-    <h1>Jacobyne Tambe</h1>
-    <p class="hero__tagline">Rigorous data systems. Delivered without the drama.</p>
+    <div class="hero__layout">
+        <!-- TODO: Add headshot photo to public/images/headshot.jpg (natural light, warm background, slight shoulder turn per brand guide) -->
+        <img
+            src="/images/headshot.jpg"
+            alt="Jacobyne Tambe"
+            class="headshot"
+            width="96"
+            height="96"
+        />
+        <div class="hero__text">
+            <h1>Jacobyne Tambe</h1>
+            <p class="hero__tagline">Rigorous data systems. Delivered without the drama.</p>
+        </div>
+    </div>
     <p class="hero__promise">I build production-grade data work for smaller companies.</p>
     <div class="hero__stack">Python · ML · Streamlit · ETL · NLP · Currently at Bank of America</div>
     <div class="center hero__cta">
@@ -17,8 +29,8 @@ const allProjects = await getCollection("projects");
             <button class="btn">Get in touch</button>
         </a>
     </div>
-    <!-- Loom embed: replace href with your Loom URL when ready -->
-    <!-- <p class="center"><a class="badge__link" href="https://loom.com/share/YOUR_ID">▶ Watch: 60-min CSV to Dashboard — how fast can I ship for your client?</a></p> -->
+    <!-- TODO: Replace YOUR_LOOM_ID with your real Loom video ID before launch -->
+    <p class="center hero__loom"><a class="badge__link" href="https://loom.com/share/YOUR_LOOM_ID">▶ Watch: 60-sec intro — what I build and how fast I ship</a></p>
 
     <h2>About</h2>
     <p>Two-plus years at Bank of America, building production ML models, Streamlit apps, and data pipelines inside a regulated, enterprise environment. I learned what real production systems look like: governance, audit trails, documentation discipline, fallback paths. The kind of rigor that only gets beaten into you when something breaks and regulators notice.</p>
@@ -52,13 +64,13 @@ const allProjects = await getCollection("projects");
             <span class="service-tier__name">Monthly Retainer</span>
             <span class="service-tier__price">Starts at $1,500/mo</span>
         </div>
-        <p class="service-tier__scope">10–15 hours of async support per month. Model monitoring, dashboard updates, ad-hoc questions, small enhancements. Async-only, 24–48 hr response.</p>
+        <p class="service-tier__scope">10–15 hours of async support per month. Model monitoring, dashboard updates, ad-hoc questions, small enhancements. Async-only, 24–48 hr response. Max 3 active clients.</p>
         <span class="badge service-tier__time">Ongoing</span>
     </div>
 
     <div class="agency-block">
         <p class="agency-block__title">For Agencies</p>
-        <p class="agency-block__body">Agency subcontract rates available on request. Weekly invoicing, async-only, white-label friendly. I'm not building my own book — your client relationship stays yours.</p>
+        <p class="agency-block__body">Agency subcontract rates available on request. Weekly invoicing, async-only, white-label friendly. I'm not building my own book — your client relationship stays yours. Availability updated weekly; current capacity visible on booking page.</p>
         <a class="badge__link" href="mailto:marietambe07@gmail.com?subject=Agency%20subcontract">Email to discuss →</a>
     </div>
 
@@ -89,6 +101,11 @@ const allProjects = await getCollection("projects");
         <li>
             <span class="badge badge--item">Email</span>
             <a class="badge__link" href="mailto:marietambe07@gmail.com?subject=Project%20inquiry">marietambe07@gmail.com</a>
+        </li>
+        <li>
+            <!-- TODO: Replace with your real Calendly URL -->
+            <span class="badge badge--item">Book a call</span>
+            <a class="badge__link" href="https://calendly.com/YOUR_HANDLE" target="_blank">Schedule a 20-min intro call</a>
         </li>
     </ul>
     <p class="contact-hint">Subject line: <em>Project inquiry</em>, <em>Agency subcontract</em>, or <em>Data analyst role</em></p>

@@ -1,53 +1,52 @@
 ---
-title: 'Cameroon Public Data Pipeline'
-description: 'End-to-end ETL from raw government source to live public dashboard — a reproducible pipeline pattern for any mid-market data consolidation engagement.'
+title: 'Employee Retention Survival Analysis'
+description: 'Kaplan-Meier and Cox regression applied to HR attrition data — time-to-churn modeling that gives HR teams the when, not just the who.'
 image:
     url: '/images/laptop.webp'
-    alt: 'Cameroon Public Data Pipeline'
+    alt: 'Employee Retention Survival Analysis'
 worksImage1:
     url: '/images/image-1.webp'
-    alt: 'Pipeline architecture diagram'
+    alt: 'Kaplan-Meier survival curves by department'
 worksImage2:
     url: '/images/image-2.webp'
-    alt: 'Live Streamlit dashboard with Cameroon trade indicators'
-platform: Streamlit Community Cloud + GitHub Actions
-stack: 'Python, Pandas, SQLite, Streamlit, GitHub Actions, BeautifulSoup'
+    alt: 'Cox regression hazard ratios with confidence intervals'
+platform: Jupyter Notebook + Streamlit
+stack: 'Python, Pandas, lifelines, Plotly, Streamlit, scikit-learn'
 github: https://github.com/jtambe007
 ---
 
-One command from raw government CSV to live dashboard, updated weekly. This is the exact pattern I'd apply to your client's data consolidation project — swap the source, keep the skeleton.
+<!-- TODO: Replace placeholder images with real screenshots before launch -->
+
+Most attrition models tell you *who* is likely to leave. This one tells you *when* — and which factors accelerate the clock.
 
 ## The Problem
 
-Mid-market clients arrive with data scattered across five or more sources: spreadsheets, legacy databases, API exports, PDFs, and inconsistent CSVs with no schema and no documentation. Nobody has integrated it.
+Standard classification models (logistic regression, random forest) predict whether an employee will leave. They don't capture time. An HR team needs to know: of the employees flagged at risk, who is leaving in 30 days versus 18 months? The intervention for each is completely different.
 
-The deliverable an agency actually needs isn't the dashboard — it's the **pipeline pattern**: a reproducible, documented skeleton that ingests messy source data, cleans it reliably, stores it, and serves it. This project is proof I can ship that pattern end-to-end, without an engineering team behind me.
+Survival analysis is the right tool for this question and it's underused in HR analytics precisely because most data practitioners don't know it.
 
 ## The Approach
 
-Using Cameroon government trade and economic indicators as the source data — real-world messy, inconsistent formats, encoding issues, broken URLs — the pipeline covers every stage:
+Applied survival analysis methods to the IBM HR Attrition dataset (1,470 employees, 35 features):
 
-1. **Ingest** — scrape or download from public government data URL
-2. **Clean and normalize** — handle encoding errors, inconsistent date formats, missing values, and column name drift across annual releases
-3. **Store** — load into SQLite (zero-infrastructure, version-controlled alongside code)
-4. **Serve** — Streamlit dashboard with 2–3 views (trend lines, regional breakdown, year-over-year comparisons)
-5. **Automate** — GitHub Action scheduled to re-run weekly, keeping the dashboard live without manual intervention
-
-One-command rerun: `python pipeline.py` ingests, cleans, stores, and the dashboard picks up the updated data on next load.
-
-Architecture diagram documents every deliberate scope decision so any engineer can extend or adapt it.
+1. **Kaplan-Meier curves** — non-parametric survival estimates by department, job role, and tenure band; visual answer to "what does attrition look like over time for each group?"
+2. **Log-rank tests** — statistical validation that survival curves differ meaningfully across groups (not just noise)
+3. **Cox Proportional Hazards model** — multivariate regression producing hazard ratios: which factors (overtime, salary band, manager tenure) independently accelerate departure risk
+4. **Segment prioritization** — employees ranked by 90-day risk score, mapped to intervention tier (manager conversation, compensation review, exit risk flag)
 
 ## Tech Stack
 
-Python · Pandas · requests / BeautifulSoup · SQLite · Streamlit · GitHub Actions · Excalidraw (architecture diagram)
+Python · Pandas · lifelines (Kaplan-Meier, Cox PH) · Plotly · Streamlit · scikit-learn
 
 ## Deliverables
 
-- Public GitHub repo with one-command rerun script and full README
-- Live dashboard on Streamlit Community Cloud, updated weekly via GitHub Actions
-- Architecture diagram embedded in the case study
-- 90-second Loom walking through one rerun cycle
+- Jupyter notebook with full analysis and annotated outputs
+- Streamlit dashboard: upload any HR CSV, get survival curves and ranked risk list
+- One-page executive summary: top 3 findings and recommended interventions
+- GitHub repo with README and sample dataset
 
 ## Outcome
 
-The real signal is not Cameroon — it's *I can go from raw, ugly, untrusted data all the way to a live, auto-refreshing dashboard, by myself, repeatably.* This pattern scales to any multi-source client project. Swap the source, keep the skeleton.
+<!-- TODO: Update with real model metrics once complete -->
+
+Cox model identifies overtime and low salary band as the two strongest predictors of 90-day departure (hazard ratios TBD on final dataset). The Streamlit dashboard lets an HR generalist run the analysis without touching Python.

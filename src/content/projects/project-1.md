@@ -1,53 +1,54 @@
 ---
-title: 'Subscription Churn Playbook'
-description: 'A churn prediction model bundled with a segmented retention playbook — ML output turned into a business action plan an executive can use on Monday.'
+title: 'Data Validation Streamlit App'
+description: 'A reusable Streamlit app that catches data-quality errors before they hit production — drop it into any agency client workflow in an afternoon.'
 image:
-    url: '/images/netflix-thumb.jpg'
-    alt: 'Subscription Churn Playbook'
+    url: '/images/laptop.webp'
+    alt: 'Data Validation Streamlit App'
 worksImage1:
     url: '/images/image-1.webp'
-    alt: 'SHAP feature importance chart'
+    alt: 'Data health scorecard with color-coded findings'
 worksImage2:
     url: '/images/image-2.webp'
-    alt: 'Churn risk segmentation matrix'
-platform: Jupyter Notebook
-stack: 'Python, Pandas, scikit-learn, XGBoost, SHAP, Plotly, ReportLab'
-github: https://github.com/jtambe007/netflix-cancellation-analysis
+    alt: 'Outlier distribution charts and schema drift report'
+platform: Streamlit Community Cloud
+stack: 'Python, Streamlit, Pandas, Plotly, YAML, ReportLab'
+website: https://jtambe007.github.io
+github: https://github.com/jtambe007
 ---
 
-**A 0.87 AUC is not a business plan.**
-
-Most churn portfolio projects stop at the model. Businesses don't know what to do with a confusion matrix. The gap between a model and an executable retention plan is exactly where consultants earn their rate — and closing that gap publicly is a rate-raising move.
+Upload any CSV. Get a data-health report in 30 seconds. Catches the top-10 most common issues. Configurable for a client's domain in an afternoon.
 
 ## The Problem
 
-Subscription businesses arrive with a recurring question: *who is about to leave, and what do we do about it?* Most ML solutions answer the first half. They hand back a score or a ranked list. Then the client asks "so what do we do?" and the project stalls.
+Clients ship messy CSVs and exports into dashboards constantly. Nulls, duplicates, schema drift, encoding errors, outliers — every project starts with the same painful cleanup cycle that consumes 30–50% of project time.
 
-The deliverable businesses actually need isn't the model — it's the playbook that tells each team what action to take for each customer segment.
+Most freelancers tell agencies *"I can clean your data."* A prebuilt, configurable tool that already does it is a fundamentally different sales position: faster delivery, more professional result, lower agency cost per project.
 
 ## The Approach
 
-Built on 500+ Netflix show records from the TMDB API, this project uses the churn/cancellation signal as a proxy for subscription disengagement. The model pipeline:
+A hosted Streamlit app that accepts a CSV upload and runs a configurable suite of checks:
 
-1. **Baseline** — logistic regression to establish an interpretable floor
-2. **Champion model** — XGBoost with cross-validated hyperparameter tuning
-3. **Interpretability layer** — SHAP values to expose which features drive each prediction at the individual level, not just globally
+- **Null analysis** — column-level missing rate with threshold flags
+- **Duplicate detection** — exact and near-duplicate rows
+- **Type mismatches** — values that don't match declared or inferred schema
+- **Outlier detection** — both IQR and z-score methods, configurable sensitivity
+- **Schema drift** — comparison against a reference file to flag added, removed, or renamed columns
 
-The key addition over a standard churn model: **risk-LTV segmentation**. Users (or shows) are binned by predicted churn probability crossed with estimated lifetime value. Each quadrant maps to a specific retention tactic:
+The rule set is **YAML-configurable** — an agency plugs in a client-specific config file and the app runs their validation profile without touching Python. Outputs a color-coded scorecard, charted distributions, and an exportable PDF report.
 
-- **High risk, high LTV** → white-glove outreach, price protection offer
-- **High risk, low LTV** → automated win-back email, feature activation nudge
-- **Low risk, high LTV** → loyalty reward, upsell window
-- **Low risk, low LTV** → no intervention (protect margin)
-
-Output includes a one-page executive summary PDF — the segmented playbook an executive can action Monday morning, not a notebook they'll never open.
+Hosted on Streamlit Community Cloud (free tier) so the demo is always live.
 
 ## Tech Stack
 
-Python · Pandas · scikit-learn · XGBoost · SHAP · Plotly · ReportLab (PDF export)
+Python · Streamlit · Pandas · Plotly · YAML configuration · ReportLab (PDF export) · Streamlit Community Cloud
+
+## Deliverables
+
+- Live hosted app with public demo URL
+- GitHub repo with README, architecture diagram, and sample YAML configs for retail, healthcare, and finance verticals
+- One sample PDF report using a public messy dataset
+- 2-minute Loom walkthrough: messy CSV in, full health report out
 
 ## Outcome
 
-Model achieves 87% AUC. More importantly, every prediction maps to a segmented action — not just a score. The pattern (Model + Playbook) is how every ML deliverable should ship.
-
-> *This project uses TMDB data but is not endorsed or certified by TMDB.*
+Any analytics agency can drop this into a client workflow on day one of a project. The validation step that used to take a half-day now takes 30 seconds and produces a client-ready report.
