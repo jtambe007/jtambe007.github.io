@@ -1,54 +1,56 @@
 ---
-title: 'Data Validation Streamlit App'
-description: 'A reusable Streamlit app that catches data-quality errors before they hit production — drop it into any agency client workflow in an afternoon.'
+title: 'Streamlit QA Validation App'
+description: 'A change request validation tool that eliminated a manual rework cycle. A process the team had accepted as permanent, eliminated. 20 hours saved per release cycle.'
 image:
     url: '/images/laptop.webp'
-    alt: 'Data Validation Streamlit App'
+    alt: 'Streamlit QA Validation App'
 worksImage1:
     url: '/images/image-1.webp'
-    alt: 'Data health scorecard with color-coded findings'
+    alt: 'Validation dashboard with color-coded findings by severity'
 worksImage2:
     url: '/images/image-2.webp'
-    alt: 'Outlier distribution charts and schema drift report'
-platform: Streamlit Community Cloud
+    alt: 'Before/after comparison report output'
+platform: Streamlit
 stack: 'Python, Streamlit, Pandas, Plotly, YAML, ReportLab'
-website: https://jtambe007.github.io
 github: https://github.com/jtambe007
 ---
 
-Upload any CSV. Get a data-health report in 30 seconds. Catches the top-10 most common issues. Configurable for a client's domain in an afternoon.
+A process the team had accepted as permanent, eliminated. 20 hours saved per release cycle.
 
 ## The Problem
 
-Clients ship messy CSVs and exports into dashboards constantly. Nulls, duplicates, schema drift, encoding errors, outliers — every project starts with the same painful cleanup cycle that consumes 30–50% of project time.
+In a regulated data environment, every model change goes through a change request process — a structured review that ensures production systems behave exactly as documented. The QA validation step in that process was entirely manual: a team member would compare the incoming change against the existing system state, flag discrepancies, and log findings by hand.
 
-Most freelancers tell agencies *"I can clean your data."* A prebuilt, configurable tool that already does it is a fundamentally different sales position: faster delivery, more professional result, lower agency cost per project.
+This wasn't a one-off task. It happened every release cycle. The manual nature meant:
 
-## The Approach
+- Findings were inconsistent depending on who ran the check
+- Errors were sometimes caught late, triggering rework after review had already closed
+- The process consumed an entire afternoon per cycle, reliably
 
-A hosted Streamlit app that accepts a CSV upload and runs a configurable suite of checks:
+The team had accepted this as structural overhead. It wasn't.
 
-- **Null analysis** — column-level missing rate with threshold flags
-- **Duplicate detection** — exact and near-duplicate rows
-- **Type mismatches** — values that don't match declared or inferred schema
-- **Outlier detection** — both IQR and z-score methods, configurable sensitivity
-- **Schema drift** — comparison against a reference file to flag added, removed, or renamed columns
+## The Build
 
-The rule set is **YAML-configurable** — an agency plugs in a client-specific config file and the app runs their validation profile without touching Python. Outputs a color-coded scorecard, charted distributions, and an exportable PDF report.
+A Streamlit app that automates the validation step end-to-end. The tool ingests the change request documentation and the current system state, runs a configurable suite of checks, and outputs a structured findings report — color-coded by severity, with a PDF export for the audit trail.
 
-Hosted on Streamlit Community Cloud (free tier) so the demo is always live.
+The rule set is **YAML-configurable**, so the checks can be updated without touching Python code. New validation requirements get added in a config file, not a deployment.
+
+Key checks:
+- **Schema drift detection** — flags any column added, removed, or renamed against the documented spec
+- **Threshold validation** — ensures value ranges match approved bounds
+- **Null and completeness checks** — column-level missing rate against configured tolerances
+- **Cross-field consistency** — validates relationships between fields that should move together
+
+Outputs a color-coded scorecard, a summary of findings by severity, and an exportable PDF report formatted for the review record.
 
 ## Tech Stack
 
-Python · Streamlit · Pandas · Plotly · YAML configuration · ReportLab (PDF export) · Streamlit Community Cloud
-
-## Deliverables
-
-- Live hosted app with public demo URL
-- GitHub repo with README, architecture diagram, and sample YAML configs for retail, healthcare, and finance verticals
-- One sample PDF report using a public messy dataset
-- 2-minute Loom walkthrough: messy CSV in, full health report out
+Python · Streamlit · Pandas · Plotly · YAML configuration · ReportLab (PDF export)
 
 ## Outcome
 
-Any analytics agency can drop this into a client workflow on day one of a project. The validation step that used to take a half-day now takes 30 seconds and produces a client-ready report.
+The manual afternoon is gone. The tool runs the full validation suite in under two minutes and produces a report the review team can act on directly — no interpretation required, no inconsistency between runs.
+
+**20 hours saved per release cycle.** The tool is still running.
+
+The more durable outcome: the validation step is now auditable. Every run produces the same format, logged with a timestamp. That consistency matters in a regulated environment where the question isn't just "did it pass" but "how do we know it passed."

@@ -1,53 +1,50 @@
 ---
-title: 'Cameroon Public Data Pipeline'
-description: 'End-to-end ETL from raw government source to live public dashboard — a reproducible pipeline pattern for any mid-market data consolidation engagement.'
+title: '2024 WiDS Datathon — Breast Cancer Treatment Prediction'
+description: 'Binary classification model predicting whether metastatic breast cancer patients received timely treatment. Built for the 2024 Women in Data Science Datathon using real patient records from Health Verity.'
 image:
     url: '/images/laptop.webp'
-    alt: 'Cameroon Public Data Pipeline'
+    alt: '2024 WiDS Datathon — Breast Cancer Treatment Prediction'
 worksImage1:
     url: '/images/image-1.webp'
-    alt: 'Pipeline architecture diagram'
+    alt: 'Feature importance chart for treatment prediction model'
 worksImage2:
     url: '/images/image-2.webp'
-    alt: 'Live Streamlit dashboard with Cameroon trade indicators'
-platform: Streamlit Community Cloud + GitHub Actions
-stack: 'Python, Pandas, SQLite, Streamlit, GitHub Actions, BeautifulSoup'
-github: https://github.com/jtambe007
+    alt: 'Model evaluation — ROC curve and classification report'
+platform: Kaggle
+stack: 'Python, Pandas, scikit-learn, XGBoost, SHAP, Plotly'
+github: https://www.kaggle.com/jacobynetambe/competitions
 ---
 
-One command from raw government CSV to live dashboard, updated weekly. This is the exact pattern I'd apply to your client's data consolidation project — swap the source, keep the skeleton.
+External proof that the ML work exists outside regulated environments. A public competition with real patient data, a real classification problem, and a documented submission.
 
 ## The Problem
 
-Mid-market clients arrive with data scattered across five or more sources: spreadsheets, legacy databases, API exports, PDFs, and inconsistent CSVs with no schema and no documentation. Nobody has integrated it.
+The 2024 WiDS Datathon, organized by Stanford's Women in Data Science initiative, challenged participants to predict whether patients with metastatic breast cancer received timely treatment — specifically, whether a patient received treatment within 90 days of diagnosis.
 
-The deliverable an agency actually needs isn't the dashboard — it's the **pipeline pattern**: a reproducible, documented skeleton that ingests messy source data, cleans it reliably, stores it, and serves it. This project is proof I can ship that pattern end-to-end, without an engineering team behind me.
+The dataset came from Health Verity, a real-world evidence platform with de-identified patient records: diagnosis codes, demographics, prior medical history, and treatment records. This is not a Kaggle toy dataset. The signal is subtle, the class imbalance is real, and the features require domain context to interpret.
+
+Getting this prediction right has clinical stakes. Treatment delays in metastatic breast cancer are associated with worse outcomes. Identifying patients at risk of delayed care — and understanding what predicts that delay — is a genuine public health question.
 
 ## The Approach
 
-Using Cameroon government trade and economic indicators as the source data — real-world messy, inconsistent formats, encoding issues, broken URLs — the pipeline covers every stage:
+**Data preparation:** The dataset included ICD diagnosis codes, geographic region, age at diagnosis, insurance type, and prior treatment history. Significant feature engineering was required: encoding diagnosis codes meaningfully, creating interaction features between demographic and clinical variables, and handling missing values in a way that preserved the signal rather than masking it.
 
-1. **Ingest** — scrape or download from public government data URL
-2. **Clean and normalize** — handle encoding errors, inconsistent date formats, missing values, and column name drift across annual releases
-3. **Store** — load into SQLite (zero-infrastructure, version-controlled alongside code)
-4. **Serve** — Streamlit dashboard with 2–3 views (trend lines, regional breakdown, year-over-year comparisons)
-5. **Automate** — GitHub Action scheduled to re-run weekly, keeping the dashboard live without manual intervention
+**Baseline:** Logistic regression — interpretable, fast to validate, useful as a floor to beat. This step also surfaces which features carry linear signal before adding model complexity.
 
-One-command rerun: `python pipeline.py` ingests, cleans, stores, and the dashboard picks up the updated data on next load.
+**Champion model:** XGBoost with cross-validated hyperparameter tuning. Tree-based models handle the feature interactions in medical record data better than linear models, and XGBoost's built-in handling of missing values simplified the preprocessing pipeline.
 
-Architecture diagram documents every deliberate scope decision so any engineer can extend or adapt it.
+**Interpretability:** SHAP values to expose which features drove individual predictions — not just global feature importance. In healthcare contexts, knowing *why* a model flags a patient matters as much as whether the flag is accurate.
+
+**Evaluation metric:** AUC (area under the ROC curve), which handles the class imbalance in treatment outcomes without requiring a fixed threshold decision.
 
 ## Tech Stack
 
-Python · Pandas · requests / BeautifulSoup · SQLite · Streamlit · GitHub Actions · Excalidraw (architecture diagram)
-
-## Deliverables
-
-- Public GitHub repo with one-command rerun script and full README
-- Live dashboard on Streamlit Community Cloud, updated weekly via GitHub Actions
-- Architecture diagram embedded in the case study
-- 90-second Loom walking through one rerun cycle
+Python · Pandas · scikit-learn · XGBoost · SHAP · Plotly
 
 ## Outcome
 
-The real signal is not Cameroon — it's *I can go from raw, ugly, untrusted data all the way to a live, auto-refreshing dashboard, by myself, repeatably.* This pattern scales to any multi-source client project. Swap the source, keep the skeleton.
+A complete end-to-end ML pipeline on real patient-level data: raw records to submission-ready predictions. The competition is public and the work is documented.
+
+This project sits alongside the BofA production work as evidence of the same pattern applied in a different context: start with the problem, understand the data, build interpretably, validate rigorously. The domain changes. The discipline doesn't.
+
+[View competition on Kaggle →](https://www.kaggle.com/jacobynetambe/competitions)

@@ -3,78 +3,57 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import Card from '../components/Card.astro';
 const pageTitle = "Jacobyne Tambe — Rigorous data systems. Delivered without the drama.";
-const description = "Jacobyne Tambe builds production-grade ML models, Streamlit apps, and data pipelines for agencies and SMBs. Currently at Bank of America. Based in Charlotte, NC.";
+const description = "Analytics engineer with nine ML models shipped inside a regulated banking enterprise. Production ML, Streamlit tooling, and data pipelines. Based in Charlotte, NC.";
 const allProjects = await getCollection("projects");
 ---
 <Layout pageTitle={pageTitle} description={description}>
 
     <div class="hero__layout">
-        <!-- TODO: Add headshot photo to public/images/headshot.jpg (natural light, warm background, slight shoulder turn per brand guide) -->
+        <!-- Add headshot.jpg to public/images/ to show this -->
         <img
             src="/images/headshot.jpg"
             alt="Jacobyne Tambe"
             class="headshot"
             width="96"
             height="96"
+            style="display:none"
         />
         <div class="hero__text">
             <h1>Jacobyne Tambe</h1>
             <p class="hero__tagline">Rigorous data systems. Delivered without the drama.</p>
         </div>
     </div>
-    <p class="hero__promise">I build production-grade data work for smaller companies.</p>
-    <div class="hero__stack">Python · ML · Streamlit · ETL · NLP · Currently at Bank of America</div>
+
+    <!-- Phase 3 subhead -->
+    <p class="hero__promise">Analytics engineer with nine ML models shipped inside a regulated banking enterprise. Portfolio work below.</p>
+
+    <!-- Credibility anchor -->
+    <div class="credibility-anchor">
+        <span class="badge">Bank of America</span>
+        <span class="credibility-anchor__text">9 ML models in production · Regulated enterprise · Charlotte, NC</span>
+    </div>
+
     <div class="center hero__cta">
-        <a href="#contact">
-            <button class="btn">Get in touch</button>
+        <a href="#projects">
+            <button class="btn">See the work →</button>
         </a>
     </div>
-    <!-- TODO: Replace YOUR_LOOM_ID with your real Loom video ID before launch -->
+
+    <!-- PHASE4: Uncomment for Phase 4 launch
     <p class="center hero__loom"><a class="badge__link" href="https://loom.com/share/YOUR_LOOM_ID">▶ Watch: 60-sec intro — what I build and how fast I ship</a></p>
+    -->
 
     <h2>About</h2>
-    <p>Two-plus years at Bank of America, building production ML models, Streamlit apps, and data pipelines inside a regulated, enterprise environment. I learned what real production systems look like: governance, audit trails, documentation discipline, fallback paths. The kind of rigor that only gets beaten into you when something breaks and regulators notice.</p>
-    <p>The culture didn't match the craft. Micromanagement, hostile team dynamics, the long slow grind that eats good builders. I watched myself start to burn out and made a decision: leave before the work I cared about became work I hated.</p>
-    <p>Same rigor, without the rot. Freelance, async-first, no drama. I help agencies and smaller businesses get enterprise-quality data work — without inheriting enterprise dysfunction. Cameroonian-American, based in Charlotte, NC. I write novels when I'm not shipping dashboards.</p>
-    <p><a class="badge__link" href="/posts/post-5/">Read: 9 ML Models in a Regulated Bank →</a></p>
+    <p>I'm an analytics engineer based in Charlotte, NC. For the last two-plus years I've been building production ML systems, data pipelines, and operational tooling inside one of the most regulated data environments in financial services. I shipped nine data models and coordinated hundreds of change requests.</p>
+    <p>My stack: Python, scikit-learn, XGBoost, SHAP, Streamlit, Pandas, SQL, GitHub Actions, Excel.</p>
+    <p>I build end-to-end. From raw data to the dashboard a non-technical stakeholder can act on. And I document everything, so the next person can run it without me.</p>
 
+    <!-- PHASE4: Services section — uncomment and replace stub on July 20
     <h2>Services</h2>
+    [Full services section goes here — see phase-4 branch]
+    -->
 
-    <div class="service-tier">
-        <div class="service-tier__header">
-            <span class="service-tier__name">The Analytics Audit</span>
-            <span class="service-tier__price">$1,500 fixed</span>
-        </div>
-        <p class="service-tier__scope">1-week turnaround. Data health review, top 5 findings, 3 prioritized recommendations, and 1 before/after visualization. Delivered as a branded PDF report.</p>
-        <span class="badge service-tier__time">1 week</span>
-        <p class="service-tier__sample"><a class="badge__link" href="mailto:marietambe07@gmail.com?subject=Audit%20sample%20request">Request a sample report →</a></p>
-    </div>
-
-    <div class="service-tier service-tier--featured">
-        <div class="service-tier__header">
-            <span class="service-tier__name">The Data Sprint</span>
-            <span class="service-tier__price">Starts at $5,000</span>
-        </div>
-        <p class="service-tier__scope">2-week focused build. One deliverable: a dashboard + pipeline, a data validation tool, a churn model + playbook, or a Streamlit deployment. Fixed scope, fixed price. Training session included.</p>
-        <span class="badge service-tier__time">2 weeks</span>
-    </div>
-
-    <div class="service-tier">
-        <div class="service-tier__header">
-            <span class="service-tier__name">Monthly Retainer</span>
-            <span class="service-tier__price">Starts at $1,500/mo</span>
-        </div>
-        <p class="service-tier__scope">10–15 hours of async support per month. Model monitoring, dashboard updates, ad-hoc questions, small enhancements. Async-only, 24–48 hr response. Max 3 active clients.</p>
-        <span class="badge service-tier__time">Ongoing</span>
-    </div>
-
-    <div class="agency-block">
-        <p class="agency-block__title">For Agencies</p>
-        <p class="agency-block__body">Agency subcontract rates available on request. Weekly invoicing, async-only, white-label friendly. I'm not building my own book — your client relationship stays yours. Availability updated weekly; current capacity visible on booking page.</p>
-        <a class="badge__link" href="mailto:marietambe07@gmail.com?subject=Agency%20subcontract">Email to discuss →</a>
-    </div>
-
-    <h2>Projects</h2>
+    <h2 id="projects">Projects</h2>
     <ul role="list" class="link-card-grid">
         {allProjects.map((card) => (
             <Card
@@ -92,7 +71,7 @@ const allProjects = await getCollection("projects");
     </div>
 
     <h2 id="contact">Contact</h2>
-    <p>I reply within 24 hours. Based in Charlotte, NC — available worldwide, async-first.</p>
+    <p>Based in Charlotte, NC — available worldwide, async-first. I reply within 24 hours.</p>
     <ul class="contact-list">
         <li>
             <span class="badge badge--item">LinkedIn</span>
@@ -100,13 +79,13 @@ const allProjects = await getCollection("projects");
         </li>
         <li>
             <span class="badge badge--item">Email</span>
-            <a class="badge__link" href="mailto:marietambe07@gmail.com?subject=Project%20inquiry">marietambe07@gmail.com</a>
+            <a class="badge__link" href="mailto:jacobynemarietambe@gmail.com">jacobynemarietambe@gmail.com</a>
         </li>
+        <!-- PHASE4: Add intake form and book-a-call link here
         <li>
-            <!-- TODO: Replace with your real Calendly URL -->
             <span class="badge badge--item">Book a call</span>
             <a class="badge__link" href="https://calendly.com/YOUR_HANDLE" target="_blank">Schedule a 20-min intro call</a>
         </li>
+        -->
     </ul>
-    <p class="contact-hint">Subject line: <em>Project inquiry</em>, <em>Agency subcontract</em>, or <em>Data analyst role</em></p>
 </Layout>
