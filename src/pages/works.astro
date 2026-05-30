@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 const allProjects = await getCollection("projects");
-const pageTitle = "Works — Jacobyne Tambe";
+const pageTitle = "Works";
 const description = "Production-grade data projects by Jacobyne Tambe: ML models, Streamlit apps, data pipelines, and dashboards.";
 ---
 <Layout pageTitle={pageTitle} description={description}>

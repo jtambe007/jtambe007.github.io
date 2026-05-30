@@ -1,6 +1,6 @@
 # jtambe007.github.io
 
-Personal portfolio site for Jacobyne Tambe — data analyst specializing in Python, APIs, and data visualization.
+Personal portfolio site for Jacobyne Tambe, an analytics engineer specializing in Python, APIs, and data visualization.
 
 Built with [Astro](https://astro.build) and deployed on Netlify. Theme based on [Milky-Way](https://github.com/ttomczak3/Milky-Way) by Tristen Tomczak.
 
