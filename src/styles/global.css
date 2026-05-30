@@ -586,6 +586,11 @@ html.dark {
   border-color: rgba(246, 238, 227, 0.2);
 }
 
+.dark .hero__tagline,
+.dark .hero__promise {
+  color: var(--text-dark);
+}
+
 .dark .hero__stack {
   color: var(--text-dark);
 }

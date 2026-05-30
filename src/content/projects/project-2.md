@@ -1,6 +1,6 @@
 ---
 title: '2024 WiDS Datathon: Breast Cancer Treatment Prediction'
-description: 'A binary classification model predicting whether metastatic breast cancer patients received timely treatment. this was built for the 2024 Women in Data Science Datathon using real patient records from Health Verity.'
+description: 'A binary classification model predicting whether metastatic breast cancer patients received timely treatment. This was built for the 2024 Women in Data Science Datathon using real patient records from Health Verity.'
 image:
     url: '/images/laptop.webp'
     alt: '2024 WiDS Datathon: Breast Cancer Treatment Prediction'

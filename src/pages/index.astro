@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import Card from '../components/Card.astro';
 const pageTitle = "Jacobyne Tambe";
+pageTitle.style.textAlign = "center";
 const description = "Analytics engineer with nine ML models shipped inside a regulated banking enterprise. Production ML, Streamlit tooling, and data pipelines. Based in Charlotte, NC.";
 const allProjects = await getCollection("projects");
 ---
@@ -71,7 +72,7 @@ const allProjects = await getCollection("projects");
     </div>
 
     <h2 id="contact">Contact</h2>
-    <p>Based in Charlotte, NC — available worldwide, async-first. I reply within 24 hours.</p>
+    <p>Based in Charlotte, NC. Available worldwide, async-first. I reply within 24 hours.</p>
     <ul class="contact-list">
         <li>
             <span class="badge badge--item">LinkedIn</span>
