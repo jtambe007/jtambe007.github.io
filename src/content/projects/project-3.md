@@ -12,7 +12,7 @@ worksImage2:
     alt: 'SHAP feature importance of top cancellation risk drivers'
 platform: 'Jupyter / ReportLab'
 stack: 'Python · Pandas · scikit-learn · XGBoost · SHAP · Matplotlib · ReportLab'
-github: 'https://github.com/jtambe007'
+github: 'https://github.com/jtambe007/netflix-cancellation-analysis'
 ---
 
 **A model performance metric is not a business plan.**
