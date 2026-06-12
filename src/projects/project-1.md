@@ -1,6 +1,6 @@
 ---
-title: 'Data Quality Validator'
-description: 'A configurable data validation app that scores CSV quality across five dimensions and exports a branded PDF report, turning a half-day manual audit into a 10-second automated check.'
+title: 'Automated Data Quality Validator (Saving 3.5+ Hours Per Audit)'
+description: 'A configurable data validation app that scores CSV and Excel quality across five dimensions and exports a branded PDF report, turning a half-day manual audit into a 10-second automated check. <br> Built to eliminate manual spreadsheet audits, allowing account teams to instantly validate messy, multi-source client data before it hits production dashboards.'
 image:
     url: '/images/data-validator-scorecard.png'
     alt: 'Data Health Validator scorecard showing Grade D result'
@@ -12,7 +12,7 @@ worksImage2:
     alt: 'PDF report with failed checks and summary table'
 platform: Streamlit
 stack: 'Python, Streamlit, Pandas, Plotly, ReportLab, PyYAML'
-github: https://github.com/jtambe007/data_validator
+github: https://github.com/jtambe007/streamlit-data-validation-starter-kit
 ---
 
 A half-day manual data audit, replaced by a 10-second automated check with a client-ready PDF.

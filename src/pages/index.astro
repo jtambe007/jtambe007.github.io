@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import Card from '../components/Card.astro';
 const pageTitle = "Jacobyne Tambe";
-const description = "Analytics engineer with nine ML models shipped inside a regulated banking enterprise. Production ML, Streamlit tooling, and data pipelines. Based in Charlotte, NC.";
+const description = "From raw data to client-ready pipelines. Production ML, Streamlit tooling, and data pipelines. Based in Charlotte, NC.";
 const allProjects = await getCollection("projects");
 ---
 <Layout pageTitle={pageTitle} description={description}>
@@ -20,12 +20,12 @@ const allProjects = await getCollection("projects");
         />
         <div class="hero__text">
             <h1>Jacobyne Tambe</h1>
-            <p class="hero__tagline">From messy data to clear decisions.</p>
+            <p class="hero__tagline">From raw data to client-ready pipelines.</p>
         </div>
     </div>
 
-    <!-- Phase 3 subhead -->
-    <p class="hero__promise">Analytics engineer with nine ML models shipped inside a regulated banking enterprise. Portfolio work below.</p>
+    <!-- subhead -->
+    <p class="hero__promise">White-label Analytics Engineer specializing in production data automation, custom data apps, and enterprise-grade documentation.</p>
 
     <!-- Credibility anchor -->
     <div class="credibility-anchor">
@@ -46,12 +46,41 @@ const allProjects = await getCollection("projects");
     <h2>About</h2>
     <p>I'm an analytics engineer based in Charlotte, NC. For the last two-plus years I've been building production ML systems, data pipelines, and operational tooling inside one of the most regulated data environments in financial services. I shipped nine data models and coordinated hundreds of change requests.</p>
     <p>My stack: Python, scikit-learn, XGBoost, SHAP, Streamlit, Pandas, SQL, GitHub Actions, Excel.</p>
-    <p>I build end-to-end. From raw data to the dashboard a non-technical stakeholder can act on. And I document everything, so the next person can run it without me.</p>
+    <p>I build end-to-end pipelines that slip seamlessly into your agency's existing client workflows. From ingestion to deployment, I write production-grade code that non-technical account managers can interpret and act on. I document every asset natively so your internal team can step in at any time without a technical bottleneck.</p>
 
-    <!-- PHASE4: Services section — uncomment and replace stub on July 20
     <h2>Services</h2>
-    [Full services section goes here — see phase-4 branch]
-    -->
+    <div class="service-tier">
+      <div class="service-tier__header">
+        <span class="service-tier__name">Analytics Audit</span>
+        <span class="service-tier__price">$1,500 fixed</span>
+      </div>
+      <p class="service-tier__scope">Data health review with top 5 findings, 3 actionable recommendations, before/after visualizations, and a branded PDF deliverable.</p>
+      <small class="service-tier__time">1-week turnaround</small>
+    </div>
+
+    <div class="service-tier service-tier--featured">
+      <div class="service-tier__header">
+        <span class="service-tier__name">Data Sprint</span>
+        <span class="service-tier__price">From $5,000</span>
+      </div>
+      <p class="service-tier__scope">One focused build for a pipeline, dashboard, or custom data app delivered in two weeks. Training session bundled.</p>
+      <small class="service-tier__time">2-week sprint</small>
+    </div>
+
+    <div class="service-tier">
+      <div class="service-tier__header">
+        <span class="service-tier__name">Monthly Retainer</span>
+        <span class="service-tier__price">From $1,500/month</span>
+      </div>
+      <p class="service-tier__scope">Ongoing async support for iterative builds, QA, and data ops. 24–48 hour response time.</p>
+      <small class="service-tier__time">10–15 hours/month &nbsp;·&nbsp; Max 3 clients</small>
+    </div>
+
+    <div class="agency-block">
+      <p class="agency-block__title">Agency Subcontract</p>
+      <p class="agency-block__body">White-label, async-only. Drop me into an existing client workflow. I deliver production-grade work your team can own. Weekly invoicing. </p>
+      <small class="service-tier__time">$85–110/hr &nbsp;·&nbsp; 10–20 hrs/week</small>
+    </div>    
 
     <h2 id="projects">Projects</h2>
     <ul role="list" class="link-card-grid">

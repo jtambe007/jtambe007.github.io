@@ -1,6 +1,6 @@
 ---
-title: 'Show Survival Analysis and Content Portfolio Playbook'
-description: 'A model predicting which streaming shows get cancelled, paired with a renewal decision framework content teams can action. Built to close the gap between model output and business decision.'
+title: 'Predictive Churn & Content Spend Optimization Playbook'
+description: 'A model predicting which streaming shows get cancelled, paired with a renewal decision framework content teams can action. Built to close the gap between model output and business decision. <br> A predictive renewal framework designed to help media and strategy agencies forecast asset longevity and optimize client ad spend allocation across fluctuating digital portfolios.'
 image:
     url: '/images/netflix-thumb.jpg'
     alt: 'Netflix Show Survival Analysis'
