@@ -48,40 +48,75 @@ const allProjects = await getCollection("projects");
     <p>My stack: Python, scikit-learn, XGBoost, SHAP, Streamlit, Pandas, SQL, GitHub Actions, Excel.</p>
     <p>I build end-to-end pipelines that slip seamlessly into your agency's existing client workflows. From ingestion to deployment, I write production-grade code that non-technical account managers can interpret and act on. I document every asset natively so your internal team can step in at any time without a technical bottleneck.</p>
 
-    <h2>Services</h2>
-    <div class="service-tier">
-      <div class="service-tier__header">
-        <span class="service-tier__name">Analytics Audit</span>
-        <span class="service-tier__price">$1,500 fixed</span>
-      </div>
-      <p class="service-tier__scope">Data health review with top 5 findings, 3 actionable recommendations, before/after visualizations, and a branded PDF deliverable.</p>
-      <small class="service-tier__time">1-week turnaround</small>
-    </div>
+    <!-- START SERVICES SECTION -->
+    <section id="services" style="padding: 60px 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 900px; margin: 0 auto; color: #333;">
+        
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-size: 2.25rem; margin-bottom: 15px; color: #111; font-weight: 700;">🛠️ Services &amp; Engagement Models</h2>
+            <p style="font-size: 1.1rem; color: #666; max-width: 650px; margin: 0 auto; line-height: 1.6;">
+                Tailored for boutique consulting firms, marketing agencies, and fractional CMOs. No overhead, zero management drag, and complete async reliability.
+            </p>
+        </div>
 
-    <div class="service-tier service-tier--featured">
-      <div class="service-tier__header">
-        <span class="service-tier__name">Data Sprint</span>
-        <span class="service-tier__price">From $5,000</span>
-      </div>
-      <p class="service-tier__scope">One focused build for a pipeline, dashboard, or custom data app delivered in two weeks. Training session bundled.</p>
-      <small class="service-tier__time">2-week sprint</small>
-    </div>
+        <!-- SERVICE 1 -->
+        <div style="background: #ffffff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 15px;">
+                <h3 style="font-size: 1.5rem; margin: 0 15px 5px 0; color: #0366d6; font-weight: 600;">🔍 1. Analytics Audit</h3>
+                <span style="font-size: 1.1rem; font-weight: bold; color: #28a745; background: #e6f4ea; padding: 4px 12px; border-radius: 20px;">$1,500 Fixed Fee</span>
+            </div>
+            <p style="font-style: italic; color: #586069; margin-bottom: 15px; font-size: 1rem;">Quickly diagnose broken data flows and unlock immediate optimization strategies.</p>
+            <ul style="padding-left: 20px; line-height: 1.6; color: #444; margin-bottom: 20px;">
+                <li style="margin-bottom: 8px;"><strong>Timeline:</strong> 1-Week Turnaround.</li>
+                <li style="margin-bottom: 8px;"><strong>What You Get:</strong> Complete data infrastructure health review identifying top 5 data hygiene vulnerabilities, 3 actionable performance fixes, and before/after schema visualizations.</li>
+                <li style="margin-bottom: 8px;"><strong>Agency Value:</strong> Delivered as a fully <strong>white-labeled PDF report</strong> so your account managers can brand it and pass it directly to your client.</li>
+            </ul>
+        </div>
 
-    <div class="service-tier">
-      <div class="service-tier__header">
-        <span class="service-tier__name">Monthly Retainer</span>
-        <span class="service-tier__price">From $1,500/month</span>
-      </div>
-      <p class="service-tier__scope">Ongoing async support for iterative builds, QA, and data ops. 24–48 hour response time.</p>
-      <small class="service-tier__time">10–15 hours/month &nbsp;·&nbsp; Max 3 clients</small>
-    </div>
+        <!-- SERVICE 2 -->
+        <div style="background: #ffffff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 15px;">
+                <h3 style="font-size: 1.5rem; margin: 0 15px 5px 0; color: #0366d6; font-weight: 600;">⚡ 2. Data Sprint</h3>
+                <span style="font-size: 1.1rem; font-weight: bold; color: #28a745; background: #e6f4ea; padding: 4px 12px; border-radius: 20px;">From $5,000 Project Rate</span>
+            </div>
+            <p style="font-style: italic; color: #586069; margin-bottom: 15px; font-size: 1rem;">Accelerate your client delivery timelines with dedicated, high-impact engineering execution.</p>
+            <ul style="padding-left: 20px; line-height: 1.6; color: #444; margin-bottom: 20px;">
+                <li style="margin-bottom: 8px;"><strong>Timeline:</strong> 2-Week Sprint (Includes a bundled training and transition session).</li>
+                <li style="margin-bottom: 8px;"><strong>What You Get:</strong> A focused infrastructure build for a production data pipeline, complex reporting dashboard, or a custom internal data tool (Streamlit).</li>
+                <li style="margin-bottom: 8px;"><strong>Agency Value:</strong> Eliminates hourly billing drift. <em>Note: The 2-week timeline strictly commences once all necessary data environment credentials and schemas are provisioned and verified.</em></li>
+            </ul>
+        </div>
 
-    <div class="agency-block">
-      <p class="agency-block__title">Agency Subcontract</p>
-      <p class="agency-block__body">White-label, async-only. Drop me into an existing client workflow. I deliver production-grade work your team can own. Weekly invoicing. </p>
-      <small class="service-tier__time">$85–110/hr &nbsp;·&nbsp; 10–20 hrs/week</small>
-    </div>    
+        <!-- SERVICE 3 -->
+        <div style="background: #ffffff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); position: relative; border-left: 4px solid #f97316;">
+            <div style="position: absolute; top: -12px; right: 20px; background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; padding: 2px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;">Max 3 Active Clients</div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 15px;">
+                <h3 style="font-size: 1.5rem; margin: 0 15px 5px 0; color: #0366d6; font-weight: 600;">🔄 3. Monthly Retainer</h3>
+                <span style="font-size: 1.1rem; font-weight: bold; color: #28a745; background: #e6f4ea; padding: 4px 12px; border-radius: 20px;">From $1,500 / mo</span>
+            </div>
+            <p style="font-style: italic; color: #586069; margin-bottom: 15px; font-size: 1rem;">On-demand asynchronous analytics engineering to absorb your team's ongoing data ops task load.</p>
+            <ul style="padding-left: 20px; line-height: 1.6; color: #444; margin-bottom: 20px;">
+                <li style="margin-bottom: 8px;"><strong>Capacity:</strong> 10–15 technical hours allocated per month.</li>
+                <li style="margin-bottom: 8px;"><strong>What You Get:</strong> Ongoing asynchronous data support for iterative feature builds, QA script monitoring, pipeline cleaning updates, and rapid bug triage.</li>
+                <li style="margin-bottom: 8px;"><strong>Agency Value:</strong> 24–48 hour response windows via Slack or ClickUp. Secures continuous engineering depth on a predictable, fractional budget.</li>
+            </ul>
+        </div>
 
+        <!-- SERVICE 4 -->
+        <div style="background: #ffffff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 15px;">
+                <h3 style="font-size: 1.5rem; margin: 0 15px 5px 0; color: #0366d6; font-weight: 600;">🏢 4. Agency Subcontracting</h3>
+                <span style="font-size: 1.1rem; font-weight: bold; color: #28a745; background: #e6f4ea; padding: 4px 12px; border-radius: 20px;">$95 – $110 / hr</span>
+            </div>
+            <p style="font-style: italic; color: #586069; margin-bottom: 15px; font-size: 1rem;">Seamlessly inject an enterprise-grade developer into your live client project delivery workflows.</p>
+            <ul style="padding-left: 20px; line-height: 1.6; color: #444; margin-bottom: 20px;">
+                <li style="margin-bottom: 8px;"><strong>Availability:</strong> 10–20 hours per week (Billed via clean weekly timesheets + invoicing).</li>
+                <li style="margin-bottom: 8px;"><strong>What You Get:</strong> Direct, unbranded positioning inside your team. I handle the heavy backend Python/SQL engineering and custom data product deployment.</li>
+                <li style="margin-bottom: 8px;"><strong>Agency Value:</strong> 100% white-label, async-first infrastructure execution. I write production-grade code natively documented with clean dbt configurations and GitHub tracking so your internal team can step in and own it instantly.</li>
+            </ul>
+        </div>
+
+    </section>
+    <!-- END SERVICES SECTION -->
     <h2 id="projects">Projects</h2>
     <ul role="list" class="link-card-grid">
         {allProjects.map((card) => (
