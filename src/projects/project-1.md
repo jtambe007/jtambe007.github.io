@@ -1,6 +1,6 @@
 ---
 title: 'Automated Data Quality Validator (Saving 3.5+ Hours Per Audit)'
-description: 'A configurable data validation app that scores CSV and Excel quality across five dimensions and exports a branded PDF report, turning a half-day manual audit into a 10-second automated check. <br> Built to eliminate manual spreadsheet audits, allowing account teams to instantly validate messy, multi-source client data before it hits production dashboards.'
+description: 'A configurable data validation app that scores CSV and Excel quality across five dimensions and exports a branded PDF report, turning a half-day manual audit into a 10-second automated check. Built to eliminate manual spreadsheet audits, allowing account teams to instantly validate messy, multi-source client data before it hits production dashboards.'
 image:
     url: '/images/data-validator-scorecard.png'
     alt: 'Data Health Validator scorecard showing Grade D result'
