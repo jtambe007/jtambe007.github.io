@@ -383,6 +383,7 @@ li {
   font-family: var(--header);
   font-weight: 700;
   font-size: 1.1rem;
+  margin: 0;
 }
 
 .service-tier__price {
